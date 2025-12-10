@@ -1,0 +1,12 @@
+Steps to connect salesforce from postman:
+Description:
+    This is document prepared, how to connect salesforce from external system like Inbound integration. Here we consider postman tool as external system. 
+
+requirements:
+    1) Postman tool with logged in.
+    2) Salesforce account with user credentials. 
+
+Process:
+    a) Firstly for Inbound integration, Salesforce has to be create a user for external system. 
+    b) Connected app has to be created in salesforce to get client Id and Client secret information.
+    c)  
