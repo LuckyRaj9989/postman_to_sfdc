@@ -6,7 +6,32 @@ requirements:
     1) Postman tool with logged in.
     2) Salesforce account with user credentials. 
 
-Process:
-    a) Firstly for Inbound integration, Salesforce has to be create a user for external system. 
-    b) Connected app has to be created in salesforce to get client Id and Client secret information.
-    c)  
+Steps to do in Salesforce:
+    a) Firstly for Inbound integration, External Client App manager has to be created in salesforce to get client Id and Client secret information.
+    b)  Login to salesforce ---> Click on SetUp gear icon ---> Search for External Client App Manager and click on it.
+    c) Click new External Client Button --> It opens new screen with required fields. 
+        Basic Information Section: AppName, Name, Contact Email
+        API (Enable OAuth Settings): Enable oAuth Checkbox, Callback Url --> https://login.salesforce.com/, drag api value to right in OAuth Scopes, Enable Client Credentials Flow checkbox.
+    d) Click Create Button.
+    e) Click Edit for policies, Choose OAuth for Start Page and Add the below url for OAuth Start Url:
+        sandbox: https://test.salesforce.com/services/oauth2/token
+        prod: https://login.salesforce.com/services/oauth2/token
+    f) Enable the Client Credentials flow and add your username to below field. After everything click save.
+    g) Click settings, Click consumerKey button from OAuth Settings Section.
+    h) Verify the code which sent to your email, and note consumer key and consumer secret separately for backup.
+
+Steps to do in Postman:
+Method1:
+    a) Open Postman application, Create a new collection to test and name it as your wish. 
+    b) Select OAuth 2.0 from dropdown in Type field.
+    c) Name as your wish for Token Name
+    d) Choose Client Credentials for Grant Type option.
+    e) For Access token URl field, first you have get your domain url and the below code has to concatinate:
+        Domain Url: Go to salesforce SetUp ---> Select MyDomain ---> Copy the Domain Url
+        Prod: https://{{DomainUrl}}/services/oauth2/token
+    f) Copy the Consumerkey value in ClientId field, consumer secret value in Client Secret field.
+    g) Click Get New Access Token Button. After Success screen with authorization, Click Use Token Button. 
+    h) You can see that accesstoken is added in Access Token field. 
+    i) Save the collection. 
+
+    
