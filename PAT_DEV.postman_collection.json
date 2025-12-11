@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "36b41a26-69f0-46bf-8ac5-ea91b024ef50",
+		"name": "PAT_DEV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessTokenUrl",
+				"value": "https://pat--patdev.sandbox.my.salesforce.com/services/oauth2/token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "6BEF3E924DC5A29EA69603B36312F3E54E9A0BCCAEFE98291767A1DD6042B557",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "3MVG9TSugzPK9MvqxApNsVMuwvEdXs4Ew8ER.9C3PBDdDo6dYYYh9ZipRF8DtSp7zOaF6rkh1NseSKTwBkwGz",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "SFDC_Token",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

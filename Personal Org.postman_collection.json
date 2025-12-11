@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "f8c5654c-ab4a-480b-8895-d881c537f66f",
+		"name": "Personal Org",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account Query",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Access_Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://grrsoftwaresolutons-dev-ed.my.salesforce.com/services/data/v64.0/query?q=SELECT Name FROM Account",
+					"protocol": "https",
+					"host": [
+						"grrsoftwaresolutons-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v64.0",
+						"query"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT Name FROM Account"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "Personal Org Token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{Client_Secret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{Client_Id}}",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://grrsoftwaresolutons-dev-ed.my.salesforce.com/services/oauth2/token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Client_Id",
+			"value": "3MVG9fe4g9fhX0E7HZYtuDCQeiGIyYNPxwz86Bpdgp0LwhTYQlaAUFgDDC_lSPOKslw7GDerNmvMfAuNk4taU"
+		},
+		{
+			"key": "Client_Secret",
+			"value": "F7583B4F5D9EB2C6EA9E663AE1FA5846FEDBBCDE8E2EE3BB9EDC4F734E8D9E9B"
+		},
+		{
+			"key": "Access_Token",
+			"value": "00D5g000004h4km!AQMAQMmfod33UMGQS950ruUubo1AkKDIFQgTda5..WlFIiqFKrplEby57canzrjQ_x3Qb9wrbIxVQM7n7cCNyU9.yb55aEod"
+		}
+	]
+}
