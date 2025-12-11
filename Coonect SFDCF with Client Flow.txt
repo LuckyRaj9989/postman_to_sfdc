@@ -11,7 +11,7 @@ Steps to do in Salesforce:
     b)  Login to salesforce ---> Click on SetUp gear icon ---> Search for External Client App Manager and click on it.
     c) Click new External Client Button --> It opens new screen with required fields. 
         Basic Information Section: AppName, Name, Contact Email
-        API (Enable OAuth Settings): Enable oAuth Checkbox, Callback Url --> https://login.salesforce.com/, drag api value to right in OAuth Scopes, Enable Client Credentials Flow checkbox.
+        API (Enable OAuth Settings): Enable oAuth Checkbox, Callback Url --> https://test.salesforce.com/services/oauth2/success(callback) (for Sandbox), https://login.salesforce.com/services/oauth2/success(callback) (for Production), drag api value to right in OAuth Scopes, Enable Client Credentials Flow checkbox.
     d) Click Create Button.
     e) Click Edit for policies, Choose OAuth for Start Page and Add the below url for OAuth Start Url:
         sandbox: https://test.salesforce.com/services/oauth2/token
