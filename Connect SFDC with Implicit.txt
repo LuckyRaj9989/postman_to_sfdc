@@ -1,0 +1,10 @@
+Needed before hitting url in web browser:
+    1) Domain Url,
+    2) Client_id
+    3) Callback Url
+For Client Id, secret we need to create External Client App Manager with Authorization code flow and api or full OAuth scopes.
+
+Web Url:
+https://{Domain_Url}/services/oauth2/authorize?client_id={Client_Id}&redirect_uri={Callback_Url}&response_type=token
+
+Result will be generated within web url having access token and other instance values.
