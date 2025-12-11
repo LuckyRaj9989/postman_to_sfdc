@@ -1,0 +1,21 @@
+Create a external client App manger with the following details:
+1) Label (As your wish)
+2) Contact Email (Your Email Address)
+3) Enable OAuth checkbox in API (Enable OAuth Settings) section.
+4) Add the callback url with the following:
+    sandbox: https://test.salesforce.com/services/oauth2/success
+    prod: https://login.salesforce.com/services/oauth2/success
+5) Add the oauth scopes (Api, full)
+6) Enable Authorization code checkbox, and disable proof key for code exchange checkbox.
+7) Once done everything, click create button to create ECAM (External Client App Manager).
+8) Collect the consumer key and consumer secret values and noted separately after verifying the email with code.
+
+Process from postman:
+    To process, we need some mandatory values:
+    1) Domain URL (We can get from salesforce SetUp), 2) Client_Id, 3) Client_Secret, 4) Callback Url (Copy the url which you placed while creating ECAM.
+    2) Prepare the url to run in web browser to get code.
+        URL: https://{DomainUrl}/services/oauth2/authorize?client_id={client_id}&redirect_uri={callback url}&response_type=code
+    3) After hit the url in browser, you will get code with new url like: {callbackurl}/code=*********. Copy the code and note it separately.
+    4) Send post request from postman will below details to get accesstoken,
+        Url: https://{DomainUrl}/services/oauth2/token?grant_type=authorization_code&code={{Copied_Code_From_Web}}&client_id={{Client_Id}}&client_secret={{PAT_Client_Secret}}&redirect_uri={{callbackUrl}}
+    5) After hitting the URL in postman with post method, you will recieve access token. 
